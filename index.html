@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel = "stylesheet" href = "main.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>College Portfolio</title>
+    </head>
+    <body>
+        <form id="login">
+            <h1>Please enter info:</h1>
+            Username: <input type="text" placeholder="Username" id="username_textbox">
+            <br><br>
+            Password: <input type="password" placeholder="Password" id="password_textbox">
+            <br><br>
+            <button>Log in</button>
+            <div id = "incorrectpassword"></div>
+
+        </form>
+        
+       <div id = "menu">
+           <div id = "home">Home</div>
+           <div id = "academics">Academics</div>
+           <div id = "extra">Extra Curriculars</div>
+           <div id = "hobbies">Hobbies</div>
+           <div id = "contact">Contact</div>
+           <input type = "text" placeholder = "Search any of my hobbies" id = "sb">
+       </div>
+
+       <div id = "home_tab">
+           <br><br>
+           <div id = "my_image">My Image</div>
+           <br> <br> <br>
+           <div id = "my_desc">Some text that describes who I am</div>
+       </div>
+
+       <div id = "academics_tab">
+            <br><br>
+           <div id = "transcript">This is where my transcript is supposed to be</div>
+           <div>Left text</div>
+           <div id = "right">right text</div>
+       </div>
+
+       <div id = "extra_tab">
+           
+        <div id = "cis">
+                <br> <br> <br>
+               <div id = "img1">cis image1</div>
+               <br> <br> <br>
+               <div id = "img2">cis image 2</div>
+               <br> <br> <br>
+               <div id = "img3">cis image 3</div>
+               <br> <br> <br>
+           </div>
+           
+           <div id = "debate_team">
+               <div class = "ec">image 1</div>
+               <br> <br> 
+               <div class = "ec">trophy image</div>
+               <br> <br>
+               <div class = "ec">sample case</div>
+               <br> <br>
+           </div>
+           
+           <div id = "track">
+               <div class = "ec">image 1</div>
+               <br> <br> 
+               <div class = "ec">team image</div>
+               <br> <br>
+               <div class = "ec">team logo</div>
+               <br> <br>
+           </div>
+
+           <div id = "chess_club">
+               <div class = "ec">glory days pic</div>
+               <br> <br> 
+               <div class = "ec">my trophies</div>
+               <br><br>
+               <div class = "ec">team picture</div>
+                <br> <br>
+           </div>
+       </div>
+
+       <div id = "hobbies_tab">
+            <br><br>
+           <div id = "chess">
+                <div>chess image</div>
+                <br><br>
+           </div>
+
+           <div id = "anime">
+               <div>Here are my top 5 series</div>
+               <br><br>
+               <div>Naruto/Naruto Shippuden</div>
+               <br><br>
+               <div>Death Note</div>
+               <br><br>
+                <div>HUNTER X HUNTER</div>
+                <br><br>
+                <div>Tokyo Ghoul</div>
+                <br><br>
+                <div>Dragon Ball Z</div>
+                <br><br>
+           </div>  
+           <div id = "video_games">
+               <div>Super Smash bros</div>
+               <br><br>
+               <div>Fire Emblem Series</div>
+               <br><br>
+               <div>Dragon Ball Fighter Z</div>
+               <br><br>
+               <div>Xenoverse</div>
+               <br><br>
+           </div>
+       </div>
+       <div id = "contact_tab">
+           <div>here i my personal email</div>
+           <br><br>
+           <div>here is my phone number</div>
+       </div>
+        <script>
+        // getting referneces to the tabs
+        let theform = document.getElementById("login");
+        let username = document.getElementById("username_textbox");
+        let password = document.getElementById("password_textbox");
+        let menu_ref = document.getElementById("menu");
+        let button_ref = document.querySelector("button");
+        let home_tab_ref = document.getElementById("home_tab");
+        let academics_tab_ref = document.getElementById("academics_tab");
+        let extra_tab_ref = document.getElementById("extra_tab");
+        let hobbies_tab_ref = document.getElementById("hobbies_tab");
+        let contact_tab_ref = document.getElementById("contact_tab");
+
+        // hiding some of the tabs
+        menu_ref.style.display = "none";
+        home_tab_ref.style.display = "none";
+        academics_tab_ref.style.display = "none"
+        extra_tab_ref.style.display = "none";
+        hobbies_tab_ref.style.display = "none";
+        contact_tab_ref.style.display = "none";
+        
+        // after loging in the user will see the menu and the home tab
+        button_ref.onclick = function(event) {
+            event.preventDefault(); // prevents the button from reloading the page
+            let usernameg = username.value;
+            let passwordg = password.value;
+            if (usernameg == "" && passwordg == "") {
+                theform.style.display = "none";
+                menu_ref.style.display = "flex";
+                home_tab_ref.style.display = "block";
+            } 
+            else {
+                document.getElementById("incorrectpassword").innerHTML += "Cant login mate ";
+            }
+        }
+
+        document.getElementById("home").onclick = function() {
+            home_tab_ref.style.display = "flex";
+            academics_tab_ref.style.display = "none";
+            extra_tab_ref.style.display = "none";
+            hobbies_tab_ref.style.display = "none";
+            contact_tab_ref.style.display = "none";
+        }
+        document.getElementById("academics").onclick = function() {
+            academics_tab_ref.style.display = "flex"
+            home_tab_ref.style.display = "none";
+            extra_tab_ref.style.display = "none";
+            hobbies_tab_ref.style.display = "none";
+            contact_tab_ref.style.display = "none";
+        }
+        document.getElementById("extra").onclick = function() {
+            extra_tab_ref.style.display = "flex";
+            home_tab_ref.style.display = "none";
+            hobbies_tab_ref.style.display = "none";
+            contact_tab_ref.style.display = "none";
+            academics_tab_ref.style.display = "none";
+        }
+        document.getElementById("hobbies").onclick = function() {
+            hobbies_tab_ref.style.display = "flex";
+            home_tab_ref.style.display = "none";
+            contact_tab_ref.style.display = "none";
+            academics_tab_ref.style.display = "none";
+            extra_tab_ref.style.display = "none";
+        }
+        document.getElementById("contact").onclick = function() {
+            contact_tab_ref.style.display = "flex";
+            home_tab_ref.style.display = "none";
+            academics_tab_ref.style.display = "none";
+            extra_tab_ref.style.display = "none";
+            hobbies_tab_ref.style.display = "none";
+        }
+        </script>
+
+    </body>
+</html>

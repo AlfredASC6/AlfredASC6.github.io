@@ -1,0 +1,78 @@
+#menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: black;
+    color: white;
+    padding-top: 10px;
+    padding-left: 12px;
+    padding-bottom: 7px;
+    padding-right: 12px;
+}
+#home {
+    border: solid white 3px;
+}
+#home_tab {
+    flex-direction: column;
+}
+#my_image {
+    border: solid black 3px;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    background-color: royalblue;
+}
+#my_desc {
+    border: solid black 3px;
+    margin: auto;
+    width: 50%;
+}
+#transcript {
+    margin: auto;
+    width: 400px;
+    height:400px;
+    border: solid black 3px;
+}
+#right {
+    float: right;
+}
+#img1 {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: solid black 3px;
+}
+#img2 {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: solid black 3px;
+}
+#img3 {
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    border: solid black 3px;
+}
+
+#extra_tab {
+    display: flex;
+    flex-direction: column;
+}
+#chess_club{
+    margin: auto;
+
+}
+#cis {
+    margin: auto;
+
+}
+#debate_team {
+    margin: auto;
+}
+#track {
+    margin: auto;
+}
+#hobbies_tab {
+    flex-direction: column;
+}
